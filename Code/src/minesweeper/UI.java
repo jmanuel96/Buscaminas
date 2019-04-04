@@ -156,15 +156,15 @@ public class UI extends JFrame
         //------------------Menu--------------------------//
         menuBar = new JMenuBar();
         
-        gameMenu = new JMenu("Game");
+        gameMenu = new JMenu("Juego");
          
-        newGame = new JMenuItem("   New Game");
-        statistics = new JMenuItem("   Statistics");
-        exit = new JMenuItem("   Exit");
+        newGame = new JMenuItem("   Nuevo Juego");
+        statistics = new JMenuItem("   Estadisticas");
+        exit = new JMenuItem("   Salir");
 
-        newGame.setName("New Game");
-        statistics.setName("Statistics");
-        exit.setName("Exit");
+        newGame.setName("Nuevo Juego");
+        statistics.setName("Estadisticas");
+        exit.setName("Salir");
 
         gameMenu.add(newGame);
         gameMenu.add(statistics);
@@ -313,7 +313,7 @@ public class UI extends JFrame
     
     //---------------SET LISTENERS--------------------------//
     
-    public void setButtonListeners(Game game)
+    public void setButtonListeners(Juego game)
     {
         addWindowListener(game);
     

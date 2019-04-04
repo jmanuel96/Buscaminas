@@ -10,10 +10,10 @@ import javafx.util.Pair;
 
 
 
-public class Board 
+public class Tabla 
 {
     private int numberOfMines;	
-    private Cell cells[][];
+    private Celda cells[][];
 
     private int rows;
     private int cols;
@@ -21,13 +21,13 @@ public class Board
         
     //---------------------------------------------//
     
-    public Board(int numberOfMines, int r, int c)
+    public Tabla(int numberOfMines, int r, int c)
     {
         this.rows = r;
         this.cols = c;
         this.numberOfMines = numberOfMines;
 
-        cells = new Cell[rows][cols];
+        cells = new Celda[rows][cols];
 
         //Step 1: First create a board with empty Cells
         createEmptyCells();         
@@ -48,7 +48,7 @@ public class Board
         {
             for (int y = 0; y < rows; y++)
             {
-                cells[x][y] = new Cell();
+                cells[x][y] = new Celda();
             }
         }
     }
@@ -158,7 +158,7 @@ public class Board
         boolean saveExists = false;
 
         try {
-            String dbURL = Game.dbPath; 
+            String dbURL = Juego.dbPath; 
             
             connection = DriverManager.getConnection(dbURL); 
             statement = connection.createStatement();
@@ -195,7 +195,7 @@ public class Board
         ResultSet resultSet = null;
 
         try {
-            String dbURL = Game.dbPath; 
+            String dbURL = Juego.dbPath; 
             
             connection = DriverManager.getConnection(dbURL); 
             
@@ -254,7 +254,7 @@ public class Board
         PreparedStatement statement = null;
         
         try {
-            String dbURL = Game.dbPath; 
+            String dbURL = Juego.dbPath; 
             
             connection = DriverManager.getConnection(dbURL); 
 
@@ -288,7 +288,7 @@ public class Board
         PreparedStatement statement = null;
         
         try {
-            String dbURL = Game.dbPath; 
+            String dbURL = Juego.dbPath; 
             
             connection = DriverManager.getConnection(dbURL); 
 
@@ -348,7 +348,7 @@ public class Board
         return numberOfMines;
     }
 
-    public Cell[][] getCells()
+    public Celda[][] getCells()
     {
         return cells;
     }
