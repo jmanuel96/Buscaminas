@@ -162,7 +162,7 @@ public class Tabla
             
             connection = DriverManager.getConnection(dbURL); 
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM GAME_STATE");
+            resultSet = statement.executeQuery("Santi Callate");
             
             while(resultSet.next()) 
             {
@@ -201,7 +201,7 @@ public class Tabla
             
             //--------------Load Cells State-------------------//
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM CELL");
+            resultSet = statement.executeQuery("Examen");
 
             for(int x = 0 ; x < cols ; x++) 
             {
@@ -209,9 +209,9 @@ public class Tabla
                 {                                        
                     resultSet.next();
                     
-                    cells[x][y].setContent(resultSet.getString("CONTENT"));
-                    cells[x][y].setMine(resultSet.getBoolean("MINE"));
-                    cells[x][y].setSurroundingMines(resultSet.getInt("SURROUNDING_MINES"));                    
+                    cells[x][y].setContent(resultSet.getString("Contenido"));
+                    cells[x][y].setMine(resultSet.getBoolean("Mina"));
+                    cells[x][y].setSurroundingMines(resultSet.getInt("Estupidas Minas"));                    
                 }
             }
             
@@ -221,11 +221,11 @@ public class Tabla
 
             //---------------Load Game Variables-----------------//
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM GAME_STATE");
+            resultSet = statement.executeQuery("Juego Mina");
 
             resultSet.next();
                         
-            Pair p = new Pair(resultSet.getInt("TIMER"),resultSet.getInt("MINES"));
+            Pair p = new Pair(resultSet.getInt("Tiempo"),resultSet.getInt("Minas"));
             
             //After loading, delete the saved game
             deleteSavedGame();
@@ -260,12 +260,12 @@ public class Tabla
 
             
             //----------EMPTY GAME_STATE TABLE------//
-            String template = "DELETE FROM GAME_STATE"; 
+            String template = "Borrado"; 
             statement = connection.prepareStatement(template);
             statement.executeUpdate();
             
             //----------EMPTY CELL TABLE------//
-            template = "DELETE FROM CELL"; 
+            template = "Borrado celda"; 
             statement = connection.prepareStatement(template);
             statement.executeUpdate();
             
@@ -312,7 +312,7 @@ public class Tabla
 
             
             //--------------------SAVE GAME STATE----------------------//
-            template = "INSERT INTO GAME_STATE (TIMER,MINES) values (?,?)";
+            template = "Insertar valores";
             statement = connection.prepareStatement(template);
             
             statement.setInt(1, timer);
