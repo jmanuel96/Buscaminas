@@ -1,7 +1,11 @@
 package minesweeper;
 
 
-
+    /** Esta clase es para ejecutar el juego
+     *
+     * @author josemanuel
+     * version 1.1
+     */
 
 public class Main 
 {

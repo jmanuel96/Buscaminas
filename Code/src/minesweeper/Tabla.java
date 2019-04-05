@@ -9,8 +9,23 @@ import java.sql.Statement;
 import javafx.util.Pair;
 
 
+    /** Esta clase es para la creación de las tablas
+     *
+     *@author josemanuel
+     * version 1.1
+     */
 
 public class Tabla 
+        
+        /**
+         * Constructor con unas tablas
+         * @param r
+         *          Numero de filas
+         * @param c
+         *          Numero de columnas
+         * @param numberOfMines
+         *          Numero de Minas
+         */
 {
     private int numberOfMines;	
     private Celda cells[][];

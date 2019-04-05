@@ -1,9 +1,14 @@
 package minesweeper;
 
-
+    /** Esta clase es para la creación de las celdas
+     *
+     *@author josemanuel
+     * version 1.1
+     */
 
 public class Celda 
 {
+    
     private boolean mine;
 
     /*

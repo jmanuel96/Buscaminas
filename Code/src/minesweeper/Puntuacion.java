@@ -13,7 +13,19 @@ import java.util.Collections;
 import java.util.Comparator;
 
 
+    /** Esta clase es para la creación de la puntuación
+     *
+     *@author josemanuel
+     * version 1.1
+     */
+
 public class Puntuacion
+    
+        /**
+         * Constructor con una lista de puntuacion, tiempo, guardar, etc.
+         */
+        
+    
 {
     ArrayList<Time> bestTimes;
     

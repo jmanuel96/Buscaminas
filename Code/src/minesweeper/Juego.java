@@ -23,6 +23,12 @@ import javax.swing.border.TitledBorder;
 import minesweeper.Puntuacion.Time;
 
 
+    /** Esta clase es la creación del proyecto
+     *
+     *@author josemanuel
+     * version 1.1
+     */
+
 
 // This is the main controller class
 public class Juego implements MouseListener, ActionListener, WindowListener
@@ -525,7 +531,7 @@ public class Juego implements MouseListener, ActionListener, WindowListener
         
         c.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         
-        dialog.setTitle("Minesweeper Statistics - Haris Muneer");
+        dialog.setTitle("Algo bueno");
         dialog.add(c);
         dialog.pack();
         dialog.setLocationRelativeTo(gui);
@@ -709,9 +715,9 @@ public class Juego implements MouseListener, ActionListener, WindowListener
         {
             ImageIcon question = new ImageIcon(getClass().getResource("/resources/question.png"));      
 
-            Object[] options = {"Save","Don't Save","Cancel"};
+            Object[] options = {"Guardar, Cancelar"};
 
-            int quit = JOptionPane.showOptionDialog(null, "What do you want to do with the game in progress?", 
+            int quit = JOptionPane.showOptionDialog(null, "Todo sirve", 
                             "New Game", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, question, options, options[2]);
 
             switch(quit) 
@@ -728,7 +734,7 @@ public class Juego implements MouseListener, ActionListener, WindowListener
                     panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
                     panel.add(new JLabel("Saving.... Please Wait", SwingConstants.CENTER));
                     dialog.add(panel);
-                    dialog.setTitle("Saving Game...");
+                    dialog.setTitle("Guardando juego...");
                     dialog.pack();
                     dialog.setLocationRelativeTo(gui);                    
                     dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -805,7 +811,7 @@ public class Juego implements MouseListener, ActionListener, WindowListener
             }
         }
         
-        else if (menuItem.getName().equals("Exit"))
+        else if (menuItem.getName().equals("Salida"))
         {
             windowClosing(null);
         }
